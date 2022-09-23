@@ -1,12 +1,15 @@
 package com.example.notesapp;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
 
@@ -24,13 +27,13 @@ public class notesdetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_notesdetail);
         mtitleofnotedetail=findViewById(R.id.titleofnotedetail);
         mcontentofnotedetail=findViewById(R.id.contentofnotedetail);
         mgotoeditnote=findViewById(R.id.gotoeditnote);
         Toolbar toolbar=findViewById(R.id.toolbarofnotedetail);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         Intent data=getIntent();
 
         mgotoeditnote.setOnClickListener(new View.OnClickListener() {
@@ -58,4 +61,5 @@ public class notesdetail extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

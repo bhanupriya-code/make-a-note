@@ -21,7 +21,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class editnoteactivity extends AppCompatActivity {
 
@@ -50,7 +49,7 @@ public class editnoteactivity extends AppCompatActivity {
 
         Toolbar toolbar=findViewById(R.id.toolbarofeditnote);
         setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
 
